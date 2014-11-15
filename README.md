@@ -40,7 +40,8 @@ $ bats shorten.bats
 
 ---
 
-© 2014 Justin Poliey. Licensed under the ISC license, see LICENSE for details.
+© 2014 Justin Poliey. Licensed under the [ISC license][isc-license].
 
 [bats]: https://github.com/sstephenson/bats
+[isc-license]: http://opensource.org/licenses/ISC
 [redis]: http://redis.io
