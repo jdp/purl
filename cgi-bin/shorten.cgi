@@ -22,8 +22,8 @@ POST)
         if [[ -z "$shortcode" ]]; then
             id=$(redis-cli incr urls)
             digits=$(echo "obase=${#alphabet}; ibase=10; $id" | bc)
-            for d in $digits
-                do shortcode="${alphabet:$((0+$d)):1}$shortcode"
+            for d in $digits; do
+                shortcode="${alphabet:$((0+$d)):1}$shortcode"
             done
             redis-cli mset "$shortcode" "$url" "$url" "$shortcode" >/dev/null
         fi
