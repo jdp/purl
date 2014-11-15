@@ -26,10 +26,8 @@ POST)
                 do shortcode="${alphabet:$((0+$d)):1}$shortcode"
             done
             redis-cli mset "$shortcode" "$url" "$url" "$shortcode" >/dev/null
-            echo "Status: 201 Created"
-        else
-            echo "Status: 200 OK"
         fi
+        echo "Status: 201 Created"
         echo "Location: /$url"
         echo && echo "$shortcode"
     else
